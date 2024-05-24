@@ -4,6 +4,8 @@
   "description": "Backend API",
   "main": "server",
   "scripts": {
+    "start": "start",
+    "dev": "start dev" 
   },
   "author": "5/13.SZOFT",
   "license": "ISC",

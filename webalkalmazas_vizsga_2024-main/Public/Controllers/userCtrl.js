@@ -67,26 +67,28 @@ app.controller('userCtrl', function($scope, $rootScope, $location){
        
         let { name, email, passwd, confirm } = $scope.user;
         
-        if (   ){
+        if ( name == null || email == null || passwd == null || confirm == null){
             alert('Nem adtál meg minden adatot!');
             return;
         }
 
-        if (   ){
+        
+
+        if ( passwd != confirm  ){
             alert('A megadott jelszavak nem egyeznek!');
             return;
         }
 
-        if (   ){
+        if (emailRegExp != email){
             alert('Nem megfelelő e-mail cím formátum!');
         }
 
-        if (   ){
+        if ( passwdRegExp != passwd ){
             alert('A megadott jelszó nem felel meg a biztonsági kritériumoknak!');
             return;
         }
 
-        axios.post(     ).then(res => {
+        axios.post($scope.user).then(res => {
             if (res.data.length > 0){
                 alert('A megadott e-mail cím már foglalt!');
                 return;
