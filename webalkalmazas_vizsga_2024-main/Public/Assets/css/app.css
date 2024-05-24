@@ -1,5 +1,12 @@
 :root {
  /* színkódok */
+  --blue: #0d6efd;
+  --white: #ffffff;
+  --silver: #c0c0c0;
+  --black: #000000;
+  --gray: #808080;
+  --slategray: #708090;
+  --yellow: #ffff00;
 }
 
 body{
@@ -9,6 +16,8 @@ body{
   font-family: "Ubuntu", sans-serif;
   font-weight: 400;
   font-style: normal;
+
+  background-image: url("../img/gray.jpg");
 }
 
 
@@ -39,6 +48,8 @@ header{
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   box-shadow: inset 0 0 20px black;
+
+  background-image: url("../img/headerbg.jpg");
 }
 
 h1{
@@ -79,3 +90,21 @@ p{
 }
 
 
+
+
+@media (max-width: 576px) {
+  .container{
+    margin: 0 auto;
+    border-radius: 0;
+  }
+  
+  header, footer{
+    border-radius: 0;
+  }
+  
+  header h1{
+    font-size: 300%;
+  }
+}
+
+back

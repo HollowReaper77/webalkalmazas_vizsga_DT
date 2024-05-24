@@ -9,7 +9,7 @@ app.run(function($rootScope, $window){
     $rootScope.workstation = "T518";
     $rootScope.year = "2024.";
     $rootScope.isLoggedIn = false;
-    $rootScope.serverUrl = "";
+    $rootScope.serverUrl = "localhost:3333"; /// mííííííííííí?
     $rootScope.penznem = "Ft";
 
     $rootScope.emailRegExp = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
@@ -57,5 +57,8 @@ app.config(function($routeProvider){
         templateUrl: 'Views/naptar.html',
         controller: 'calendarCtrl'
     })
+
+    .otherwise('/home');
+    // templateUrl: 'Views/feladatleiras.html',
 
 });
