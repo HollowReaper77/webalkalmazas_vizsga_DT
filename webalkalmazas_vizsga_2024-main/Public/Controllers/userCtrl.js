@@ -15,6 +15,9 @@ app.controller('userCtrl', function($scope, $rootScope, $location){
             let data = {
                 email: $scope.user.email,
                 passwd: CryptoJS.SHA1($scope.user.passwd).toString()
+                //passwd: $scope.user.passwd.toString()
+
+                //így már nem add akkora hibát, csak a localhost se működik
             }
             // elküldjük a szervenek a belépési adatokat ellenőrzésre
             axios.post($rootScope.serverUrl + '/logincheck', data).then(res=>{
@@ -112,6 +115,9 @@ app.controller('userCtrl', function($scope, $rootScope, $location){
     $scope.deleteUser = function(id){
 
         if (confirm('Biztosan törlöd a felhasználót?')){
+            if ('/felhasznalok/'+id){
+
+            }
             axios.delete(serverUrl + '/felhasznalok/'+id).then(res => {
                 alert('A felhasználó törölve!');
                 $scope.getUsers();
