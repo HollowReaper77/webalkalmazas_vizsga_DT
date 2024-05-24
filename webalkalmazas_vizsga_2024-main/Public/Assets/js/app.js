@@ -5,8 +5,8 @@ app.run(function($rootScope, $window){
     $rootScope.subTitle = "Webfejlesztés vizsgafeladat";
     $rootScope.company = "Bajai SZC Türr István Technikum";
     $rootScope.classroom = "5/13.SZOFT";
-    $rootScope.author = "";
-    $rootScope.workstation = "";
+    $rootScope.author = "Dezső Tamás";
+    $rootScope.workstation = "T518";
     $rootScope.year = "2024.";
     $rootScope.isLoggedIn = false;
     $rootScope.serverUrl = "";
